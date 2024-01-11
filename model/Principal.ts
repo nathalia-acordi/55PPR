@@ -1,3 +1,6 @@
+import { Cliente } from "./Cliente";
+import { Livro } from "./Livro";
+
 class Principal {
   private biblioteca: Array<Livro>;
   private cliente: Array<Cliente>;
@@ -11,8 +14,12 @@ class Principal {
     this.cliente.push(cliente);
   }
 
-  public administrarLivros(livro: Livro): void {
+  public cadastrarLivro(livro: Livro): void {
     this.biblioteca.push(livro);
+  }
+
+  public removerLivro(titulo: string): void {
+    this.biblioteca = this.biblioteca.filter(livro => livro.titulo !== titulo);
   }
 
   public iniciarSistema(): void {

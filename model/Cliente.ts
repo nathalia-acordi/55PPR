@@ -1,4 +1,6 @@
-class Cliente implements Observer {
+import { Observer } from "../interface/Observer";
+
+export class Cliente implements Observer {
   private usuario: string;
   private senha: string;
   private sexo: string;
@@ -27,7 +29,7 @@ class Cliente implements Observer {
     // Implementação do retorno de livro
   }
 
-  public atualizar(message: string): void {
+  public atualizar(): void {
     // Atualiza o status do usuário
   }
 }
