@@ -1,7 +1,7 @@
 import express from 'express';
-import { Principal } from './model/Principal';
-import { Cliente } from './model/Cliente';
-import { Livro } from './model/Livro';
+import { Principal } from '../model/Principal';
+import { Cliente } from '../model/Cliente';
+import { Livro } from '../model/Livro';
 
 const app = express();
 const principal = new Principal();
@@ -29,4 +29,3 @@ app.delete('/livro/:titulo', (req, res) => {
  res.status(200).send('Livro removido');
 });
 
-app.listen(3000, () => console.log('Servidor rodando na porta 3000'));

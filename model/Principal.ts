@@ -1,7 +1,7 @@
 import { Cliente } from "./Cliente";
 import { Livro } from "./Livro";
 
-class Principal {
+export class Principal {
   private biblioteca: Array<Livro>;
   private cliente: Array<Cliente>;
 
