@@ -1,3 +1,5 @@
+import { Livro } from "../model/Livro";
+
 export interface Observer {
-  atualizar(): void;
+  update(livro: Livro): void;
 }
