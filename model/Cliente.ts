@@ -1,16 +1,18 @@
 import { Observer } from "../interface/Observer";
 
 export class Cliente implements Observer {
-  private usuario: string;
-  private senha: string;
-  private sexo: string;
-  private divida: boolean;
+  public usuario: string;
+  private _senha: string;
+  private _sexo: string;
+  private _divida: boolean;
+  private _tipo: number;
 
-  constructor(usuario: string, senha: string, sexo: string) {
+  constructor(usuario: string, senha: string, sexo: string, tipo: number) {
     this.usuario = usuario;
-    this.senha = senha;
-    this.sexo = sexo;
-    this.divida = false;
+    this._senha = senha;
+    this._sexo = sexo;
+    this._tipo = tipo;
+    this._divida = false;
   }
 
   public login(): void {

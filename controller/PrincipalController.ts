@@ -17,7 +17,7 @@ app.set("views", path.join("PrincipalView", "./views"));
 app.post("/cliente", (req, res) => {
   const cliente = req.body;
   principal.registrarCliente(
-    new Cliente(cliente.usuario, cliente.senha, cliente.sexo)
+    new Cliente(cliente.usuario, cliente.senha, cliente.sexo, cliente.tipo)
   );
   res.status(201).send("Cliente registrado");
 });

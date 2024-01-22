@@ -23,6 +23,10 @@ export class Principal {
     this.biblioteca = this.biblioteca.filter(livro => livro.titulo !== titulo);
   }
 
+  public removerCliente(usuario: String): void {
+    this.cliente = this.cliente.filter(cliente => cliente.usuario !== usuario);
+  }
+
   public iniciarSistema(): void {
     Principal.getInstance()
   }
