@@ -31,7 +31,7 @@ export class Principal {
     Principal.getInstance()
   }
 
-  public static getInstance(): Principal {
+  private static getInstance(): Principal {
     if (!Principal.instance) {
       Principal.instance = new Principal();
     }
